@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Data Table</h2>
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>D.I. von Briesen - dvonbri1@uncc.edu - 1 year</li>
+            <li>Esam Abdullah - eabdullah@gmail.com - 31 years</li>
+            <li>Medina Gomez - gomez_med8@yahoo.com - 3 years</li>
+            <li>Aleeza Cabahug - acabahug@gmail.com - 5 years</li>
+            <li>Oleg Petuhkouv - opet@yahoo.com - 2 years</li>
+            <li>Karl Mak - kmak@gmail.com - 4 years</li>
+            <li>Dan Kim - dkim@yahoo.com - 6 years</li>
+        </ol>
+    
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>D.I. von Briesen</td>
+                <td>dvonbri1@uncc.edu</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Esam Abdullah</td>
+                <td>eabdullah@gmail.com</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>Medina Gomez</td>
+                <td>gomez_med8@yahoo.com</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Aleeza Cabahug</td>
+                <td>acabahug@gmail.com</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Oleg Petuhkouv</td>
+                <td>opet@yahoo.com</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Karl Mak</td>
+                <td>kmak@gmail.com</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Karl Mak</td>
+                <td>kmak@gmail.com</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Dan Kim</td>
+                <td>dkim@yahoo.com</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <table>
+                <caption>Employee Information</caption>
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                    <th>Monthly Salary</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">Management</td>
+                    <td>D.I. von Briesen</td>
+                    <td>dvonbri1@uncc.edu</td>
+                    <td>1</td>
+                    <td>$20,000</td>
+                </tr>
+                <tr>
+                    <td>Esam Abdullah</td>
+                    <td>eabdullah@gmail.com</td>
+                    <td>31</td>
+                    <td>$18,000</td>
+                </tr>
+                <tr>
+                    <td>Medina Gomez</td>
+                    <td>gomez_med8@yahoo.com</td>
+                    <td>3</td>
+                    <td>$15,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Technical</td>
+                    <td>Aleeza Cabahug</td>
+                    <td>acabahug@gmail.com</td>
+                    <td>5</td>
+                    <td>$12,000</td>
+                </tr>
+                <tr>
+                    <td>Oleg Petuhkouv</td>
+                    <td>opet@yahoo.com</td>
+                    <td>2</td>
+                    <td>$11,000</td>
+                </tr>
+                <tr>
+                    <td>Karl Mak</td>
+                    <td>kmak@gmail.com</td>
+                    <td>4</td>
+                    <td>$13,500</td>
+                </tr>
+                <tr>
+                    <td>Dan Kim</td>
+                    <td>dkim@yahoo.com</td>
+                    <td>6</td>
+                    <td>$14,000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Years of Service</th>
+                    <th>52</th> <!-- Example Sum -->
+                    <th>$93,500</th> <!-- Example Total Monthly Salary -->
+                </tr>
+            </table>
+        </figure>
+    </main>
+    <footer>  
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
