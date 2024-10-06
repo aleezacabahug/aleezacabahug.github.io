@@ -1,9 +1,42 @@
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    body {
+        font-size: larger; 
+    }
+    header, h1 {
+        font-size: 44px; 
+    }
+    form {
+        width: 80%; 
+    }
+}
+
+
+@media screen and (min-width: 981px) {
+    body {
+        font-size: large; 
+    }
+    header, h1 {
+        font-size: 48px; 
+    }
+    form {
+        width: 70%; 
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    header, h1 {
+        max-width: 1100px; 
+    }
+}
+
 body{
     background-color: #FFB6C1;
     color: rgb(85, 3, 101);
     font-family: 'Courier New', Courier, monospace;
     font-size:medium;  
 }
+
 header, h1{
     width: 95%;
     max-width: 1200px;
@@ -59,7 +92,6 @@ figure caption {
 
 
 form {
-    width: 60%;
     margin: auto;
     padding: 20px;
     background-color: #f4f4f4;
