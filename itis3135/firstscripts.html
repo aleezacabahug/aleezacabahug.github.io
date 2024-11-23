@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Scripts - Aleeza's Animal Kingdom</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <h1>Aleeza's Animal Kingdom</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Welcome to Our Site!</h2>
+        <h3 id="datedisplay"></h3>
+
+        <section>
+            <label for="username">Enter your name: </label>
+            <input type="text" id="username">
+            <br>
+            <label for="usermood">How are you feeling? </label>
+            <input type="text" id="usermood">
+            <button id="greetbutton">Submit</button>
+            <h3 id="greeting"></h3>
+        </section>
+
+        <section>
+            <label for="favoritenumber">Enter your favorite number (0-10): </label>
+            <input type="number" id="favoritenumber">
+            <button id="polygonbutton">Find Polygon</button>
+        </section>
+
+        <section>
+            <button id="animalgreetingbutton">Animal Greeting</button>
+            <button id="randomfactbutton">Random Animal Fact</button>
+            <button id="animalsoundbutton">Animal Sound</button>
+            <button id="animaltreatbutton">Virtual Animal Treat</button>
+            <button id="calculatepawprintsbutton">Calculate Paw Prints</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Thank you for visiting Aleeza's Animal Kingdom!</p>
+    </footer>
+
+    <script>
+        function displayDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+            const dateString = `Today is ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} on ${now.toLocaleDateString(undefined, options)}`;
+            document.getElementById('datedisplay').textContent = dateString;
+        }
+        window.onload = displayDateTime;
+
+        function greetUser() {
+            const userName = document.getElementById('username').value;
+            const userMood = document.getElementById('usermood').value;
+            const companyName = "Aleeza's Animal Kingdom";
+
+            document.getElementById('greeting').textContent = `${companyName} welcomes you, ${userName}! We're glad you are doing ${userMood}!`;
+        }
+
+        function favoritePolygon() {
+            let userNumber = Math.abs(parseInt(document.getElementById('favoritenumber').value));
+            const polygons = ["", "Monogon", "Digon", "Trigon", "Tetragon", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Nonagon", "Decagon"];
+
+            if (isNaN(userNumber) || userNumber < 0) {
+                alert("Please enter a valid number.");
+            } else {
+                userNumber = Math.round(userNumber);
+                const polygonName = polygons[userNumber] || "Polygon with more sides!";
+                alert(`A polygon with ${userNumber} sides is called a ${polygonName}.`);
+            }
+        }
+
+        function animalGreeting() {
+            alert("Welcome to Aleeza's Animal Kingdom - where the wild things play!");
+        }
+
+        function randomAnimalFact() {
+            const facts = [
+                "Did you know a group of flamingos is called a 'flamboyance'?",
+                "Octopuses have three hearts!",
+                "Tigers have striped skin, not just striped fur."
+            ];
+            alert(facts[Math.floor(Math.random() * facts.length)]);
+        }
+
+        function animalSound() {
+            alert("Roar! Chirp! Growl! Welcome to the animal sound showcase!");
+        }
+
+        function animalTreat() {
+            alert("Treat yourself with a virtual snack - animal crackers for everyone!");
+        }
+
+        function calculatePawPrints() {
+            const pawPrints = Math.floor(Math.random() * 100);
+            alert(`You've left ${pawPrints} paw prints on our website today!`);
+        }
+
+        document.getElementById("greetbutton").addEventListener("click", greetUser);
+        document.getElementById("polygonbutton").addEventListener("click", favoritePolygon);
+        document.getElementById("animalgreetingbutton").addEventListener("click", animalGreeting);
+        document.getElementById("randomfactbutton").addEventListener("click", randomAnimalFact);
+        document.getElementById("animalsoundbutton").addEventListener("click", animalSound);
+        document.getElementById("animaltreatbutton").addEventListener("click", animalTreat);
+        document.getElementById("calculatepawprintsbutton").addEventListener("click", calculatePawPrints);
+    </script>
+
+    <footer>  
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
