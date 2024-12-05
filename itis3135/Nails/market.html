@@ -5,30 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NailsBySophiaPark</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            background: #fba8e9;
+            border: 1px solid #530f3d;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5b1142;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background: #5b1142;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .image-container {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0 auto; 
+        }
+
+        .sophia {
+            max-width: 100%; 
+            max-height: 50%;
+        }
+
+        body {
+            background-image: url('images/aura2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div data-include="pages/header.html"></div>
-        <h1>NailsBySophiaPark</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 🐇 
-                <li><a href="about.html">About Us</a></li> 🐇
-                <li><a href="contact.html">Contact</a></li> 🐇
-                <li><a href="gallery.html">Gallery</a></li> 🐇
-                <li><a href="market.html">Calendar</a></li>
-            </ul>
-        </nav>
-        <img class="sophia" src="images/sophia.png" alt="NailsBySophiaPark" width="250" height="200">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </header>
-    <main>
-        <img class="sophia" src="images/calendar.png" alt="NailsBySophiaPark" width="700" height="700">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </main>
+    <div class="form-container">
+        <main>
+            <div class="image-container">
+                <img class="sophia" src="images/calendar.png" alt="NailsBySophiaPark" width="500" height="450">
+            </div>
+
+            <!-- Availability Calendar -->
+            <div id="availability-calendar" class="calendar-container"></div>
+
+            <h2>Client Nail Appointment Form</h2>
+            <form action="/submit" method="post">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+                <label for="service">What would you like?</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="gel-x">Gel-X Nails</option>
+                    <option value="custom-press-on">Custom Press-On Nails</option>
+                </select>
+
+                <label for="contact">Contact Info:</label>
+                <input type="email" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
     <footer>
         <div data-include="pages/footer.html"></div>
-        <p>&copy; 2024 NailsBySophiaPark. All rights reserved.</p>
     </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/formHandler.js"></script>
 </body>
 </html>

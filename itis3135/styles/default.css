@@ -151,3 +151,24 @@ footer{
 .indent{
     margin-left: 2em;
 }
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+.checklist li {
+    margin: 10px 0;
+}
+.checklist .checked::before {
+    content: "✔️";
+    color: green;
+    margin-right: 10px;
+}
+.checklist .warning::before {
+    content: "⚠️";
+    color: orange;
+    margin-right: 10px;
+}
+.feedback-section {
+    margin-top: 20px;
+}

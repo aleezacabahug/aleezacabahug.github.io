@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NailsBySophiaPark</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+            body {
+        background-image: url('images/aura2.png');
+        background-position: center;
+    }
+    h2{
+        color:whitesmoke;
+        text-align: center;
+    }
+    #imagecontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+        width: 80%; /* Adjust to your preference */
+        max-width: 800px; /* Set a maximum size */
+        height: auto; /* Keep aspect ratio */
+        border-radius: 10px; /* Optional styling */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Optional styling */
+    }
+    </style>
 </head>
 <body>
     <header>
         <div data-include="pages/header.html"></div>
-        <h1>NailsBySophiaPark</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 🐇 
-                <li><a href="about.html">About Us</a></li> 🐇
-                <li><a href="contact.html">Contact</a></li> 🐇
-                <li><a href="gallery.html">Gallery</a></li> 🐇
-                <li><a href="market.html">Calendar</a></li>
-            </ul>
-        </nav>
-        <img class="sophia" src="images/sophia.png" alt="NailsBySophiaPark" width="250" height="200">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </header>
     <main>
         <section id="featured-products">
-            <h2>Featured Press-on Nails</h2>
+            <h2>UNCC || GEL-X MOBILE NAIL TECH || CLT || PRESS ONS</h2>
             <div id="imagecontainer">
-                <!-- Images will be added here by JavaScript -->
+                <video width="320" height="240" controls loop>
+                    <source src="video/nails.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
             </div>
         </section>
     </main>
     <footer>
         <div data-include="pages/footer.html"></div>
-        <p>&copy; 2024 NailsBySophiaPark. All rights reserved.</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

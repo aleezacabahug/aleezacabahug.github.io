@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        header, h1 {
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 980px) {
+            body {
+                font-size: larger;
+            }
+            form {
+                width: 80%;
+            }
+        }
+
+        @media screen and (min-width: 981px) {
+            body {
+                font-size: large;
+            }
+            form {
+                width: 70%;
+            }
+        }
+
+        body {
+            background-color: #FFB6C1;
+            color: rgb(85, 3, 101);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;  
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: grey;
+        }
+
+        a {
+            color: azure;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .myslides {
+            display: none;
+            width: 100%;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;    
+}
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        .column img {
+            width: 100%;
+            align-items: center;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Slideshow</h2>
+        <div class="container">
+            <div class="myslides">
+                <div class="numbertext">1 / 6</div>
+                <img src="apple.webp" alt="apple">
+            </div>
+            <div class="myslides">
+                <div class="numbertext">2 / 6</div>
+                <img src="library.webp" alt="library">
+            </div>
+            <div class="myslides">
+                <div class="numbertext">3 / 6</div>
+                <img src="elephant.webp" alt="elephant">
+            </div>
+            <div class="myslides">
+                <div class="numbertext">4 / 6</div>
+                <img src="earth.webp" alt="earth">
+            </div>
+            <div class="myslides">
+                <div class="numbertext">5 / 6</div>
+                <img src="zebra.webp" alt="zebra">
+            </div>
+            <div class="myslides">
+                <div class="numbertext">6 / 6</div>
+                <img src="alpaca.webp" alt="alpaca">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="apple.webp" alt="Apple" data-slide="1">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="library.webp" alt="Library" data-slide="2">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="elephant.webp" alt="Elephant" data-slide="3">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="earth.webp" alt="Earth" data-slide="4">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="zebra.webp" alt="Zebra" data-slide="5">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="alpaca.webp" alt="Alpaca" data-slide="6">
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>A - Apple</li>
+            <li>L - Mystical Library</li>
+            <li>E - Elephant</li>
+            <li>E - Earth</li>
+            <li>Z - Zebra</li>
+            <li>A - Mystical Alpaca</li>
+        </ul>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+
+let slideIndex = 1;
+
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("myslides");
+    const dots = document.getElementsByClassName("demo");
+    const captionText = document.getElementById("caption");
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides(slideIndex);
+}
+
+document.querySelector(".prev").addEventListener("click", () => {
+    plusSlides(-1);
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+    plusSlides(1);
+});
+
+document.querySelectorAll(".demo").forEach((thumbnail) => {
+    thumbnail.addEventListener("click", (event) => {
+        const slideNumber = parseInt(event.target.getAttribute("data-slide"));
+        currentSlide(slideNumber);
+    });
+});
+
+// Invoke showSlides after functions are defined
+showSlides(slideIndex);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

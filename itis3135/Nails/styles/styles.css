@@ -1,9 +1,13 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Impact', sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f9;
     color: #333;
+    background-image: url('images/aura2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -13,9 +17,21 @@ header {
     text-align: center;
 }
 
+h1 {
+    /* Adding a black outline around the text */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    letter-spacing: 2px; /* Increases spacing between letters */
+    font-size: 80px;
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
+    font-size: 30px;
 }
 
 header nav ul li {
@@ -73,4 +89,106 @@ footer {
     padding: 20px 10px;
     background: #771053;
     color: #fff;
+    margin-top: 10px; /* Adjust this value to move the footer closer */
+    padding-top: 10px; /* Optional: Reduce padding if present */
+    text-align: center; 
+}
+
+
+.tagline {
+    font-size: 20px;
+    color: grey;
+}
+
+a {
+    color: azure;
+}
+
+.container {
+    position: relative;
+}
+
+.myslides {
+    display: none;
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none; 
+-moz-user-select: none;    
+-ms-user-select: none;    
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.column img {
+    width: 100%;
+    align-items: center;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+}
+
+.nail{
+    align-items: center;
 }

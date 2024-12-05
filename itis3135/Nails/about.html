@@ -5,30 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NailsBySophiaPark</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        main p {
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 70px; 
+    margin: 40px auto; 
+    border-radius: 15px; 
+    max-width: 1000px; 
+    text-align: justify; 
+}
+        .box{
+            font-size: large;
+        }
+        body {
+            background-image: url('images/aura2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div data-include="pages/header.html"></div>
-        <h1>NailsBySophiaPark</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 🐇 
-                <li><a href="about.html">About Us</a></li> 🐇
-                <li><a href="contact.html">Contact</a></li> 🐇
-                <li><a href="gallery.html">Gallery</a></li> 🐇
-                <li><a href="market.html">Calendar</a></li>
-            </ul>
-        </nav>
-        <img class="sophia" src="images/sophia.png" alt="NailsBySophiaPark" width="250" height="200">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </header>
     <main>
-        <p>Sophia Park is a talented nail technician based in Charlotte, NC, specializing in GEL-X mobile nail services and custom press-ons. As a proud University of North Carolina at Charlotte (UNCC) student, Sophia combines her passion for artistry and beauty to provide clients with convenient, high-quality nail services wherever they are. Her mobile service ensures flexibility for busy individuals, and her press-on nails offer a customizable, stylish option for any occasion. With a commitment to detail and customer satisfaction, Sophia has built a reputation for creating stunning, long-lasting nail designs tailored to each client's unique preferences.</p>
-
+        <p class="box"><strong>Sophia Park continues to innovate in the world of nail design by incorporating the latest trends and techniques into her services. Her expertise allows her to advise clients on the best choices for their nail health and aesthetics, ensuring that they always leave satisfied with their look. Additionally, Sophia actively engages with her community through social media, where she shares tips, trends, and showcases her latest nail art projects. This digital engagement not only highlights her creative talents but also builds a relationship with her audience and attracts new clients who are looking for a personalized nail care experience. Whether for a special event or regular maintenance, Sophia ensures that her clients' nails are always a highlight of their personal style.</strong></p>
     </main>
     <footer>
         <div data-include="pages/footer.html"></div>
-        <p>&copy; 2024 NailsBySophiaPark. All rights reserved.</p>
     </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

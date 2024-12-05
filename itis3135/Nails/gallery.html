@@ -5,45 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NailsBySophiaPark</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body {
+            background-image: url('images/aura2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; 
+    height: 100vh; 
+    box-sizing: border-box; 
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+}
+
+.background-aura {
+    background-image: url('aura.jpg');
+}
+
+.myslides {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.myslides img {
+    max-width: 100%; 
+    max-height: 70vh; 
+    margin: 0 auto; 
+}
+
+.caption-container {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333; 
+}
+
+a.prev, a.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: black; 
+    text-decoration: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+a.prev {
+    left: 10px; 
+}
+
+a.next {
+    right: 10px; 
+}
+    </style>
 </head>
 <body>
     <header>
         <div data-include="pages/header.html"></div>
-        <h1>NailsBySophiaPark</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 🐇 
-                <li><a href="about.html">About Us</a></li> 🐇
-                <li><a href="contact.html">Contact</a></li> 🐇
-                <li><a href="gallery.html">Gallery</a></li> 🐇
-                <li><a href="market.html">Calendar</a></li>
-            </ul>
-        </nav>
-        <img class="sophia" src="images/sophia.png" alt="NailsBySophiaPark" width="250" height="200">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </header>
     <main>
-        <img src="images/nail5.png" class="nail" alt="nail" width="200">
-        <img src="images/nail5.png" class="nail" alt="nail" width="200">
-        <img src="images/nail7.png" class="nail" alt="nail" width="200">
-        <img src="images/nail8.png" class="nail" alt="nail" width="200">
-        <img src="images/nail9.png" class="nail" alt="nail" width="200">
-        <img src="images/nail10.png" class="nail" alt="nail" width="200">
-        <img src="images/nail11.png" class="nail" alt="nail" width="200">
-        <img src="images/nail13.png" class="nail" alt="nail" width="200">
-        <img src="images/nail14.png" class="nail" alt="nail" width="200">
-        <img src="images/nail15.png" class="nail" alt="nail" width="200">
-        <img src="images/nail16.png" class="nail" alt="nail" width="200">
-        <img src="images/nail17.png" class="nail" alt="nail" width="200">
-        <img src="images/nail18.png" class="nail" alt="nail" width="200">
-        <img src="images/nail19.png" class="nail" alt="nail" width="200">
-        <img src="images/nail20.png" class="nail" alt="nail" width="200">
-        <img src="images/nail21.png" class="nail" alt="nail" width="200">
-        <img src="images/nail22.png" class="nail" alt="nail" width="200">
+        <p class="background-aura"></p>
+        <div class="container">
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail5.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail7.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail8.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail9.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail10.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail11.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail13.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail14.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail15.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail16.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail17.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail18.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail19.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail20.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail21.png" class="nail" alt="nail">
+            </div>
+            <div class="myslides">
+                <div class="numbertext"></div>
+                <img src="images/nail22.png" class="nail" alt="nail">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
     </main>
     <footer>
         <div data-include="pages/footer.html"></div>
-        <p>&copy; 2024 NailsBySophiaPark. All rights reserved.</p>
     </footer>
+    <script src="scripts/slide.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
